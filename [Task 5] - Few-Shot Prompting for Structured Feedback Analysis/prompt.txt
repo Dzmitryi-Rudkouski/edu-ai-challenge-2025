@@ -1,0 +1,138 @@
+Даны реальные отзывы: 
+Отзыв 1: "Датчик просто перестает отслеживать примерно на полсекунды довольно часто даже при 8000Hz. Я также пробовал его подключенным и всё равно та же проблема. Первый купленный у меня пришлось вернуть, потому что донгл просто не работал, кстати мышь за $150."
+Отзыв 2: "Стоит ли оно того? Это продукт без недостатков по моему мнению, если любите его — покупайте, но он не стоит своей цены, так как вы сможете выполнить то же самое более дешевым продуктом с половиной характеристик."
+Необходимо произвести их анализ каждого отзыва на релевантность продукту. Если отзыв не релевантен —  установить isRelevant в false и пропустить дальнейший анализ этого отзыва, так же необходимо классифицировать настроение и произвести глубокий анализ релевантного отзыва на основе Few-Shot Prompting по такому примеру в виде кода Feedback 1: "I've never been a fan of the GPX shape and to me, it feels like I am holding a potato. The front hump felt a bit intrusive on the backside of my knucles. Ergonomics are better on the Viper V3 PRO specially on the rear portion of the mouse and the side part where you rest/grip your fingers to hold the mouse."
+
+Expected analysis result :
+
+{
+
+"sentiment": "Positive",
+
+"isRelevant": true,
+
+"mainSubject": "Ergonomics and shape (compared favorably to GPX)",
+
+"positives": [
+
+"Ergonomics are better on the Viper V3 PRO",
+
+"Better rear portion ergonomics",
+
+"Better side grip area"
+
+],
+
+"painPoints": [],
+
+"improvementSuggestions": [],
+
+"featuresMentioned": [
+
+"Ergonomics",
+
+"Shape",
+
+"Rear design",
+
+"Side grip"
+
+],
+
+"userExpertise": "Experienced"
+
+}
+
+
+Feedback 2: "If you are a GPX lover, I think they managed to improve everything I thought It was wrong about the GPX series, they made the shape better, they fixed the side buttons, scrolling wheel is better, gliding is faster and feels like the perfect compromise between control and speed."
+
+Expected analysis result :
+
+{
+
+"sentiment": "Positive",
+
+"isRelevant": true,
+
+"mainSubject": "Feature improvements over competitor (GPX)",
+
+"positives": [
+
+"Better shape than GPX series",
+
+"Improved side buttons",
+
+"Better scrolling wheel",
+
+"Faster gliding with good control-speed balance"
+
+],
+
+"painPoints": [],
+
+"improvementSuggestions": [],
+
+"featuresMentioned": [
+
+"Shape",
+
+"Side buttons",
+
+"Scrolling wheel",
+
+"Gliding performance"
+
+],
+
+"userExpertise": "Experienced"
+
+}
+
+
+Feedback 3: "I can't say I'm a fan of the material used for the shell, either—the plastic attracts fingerprints like a grease magnet and the mouse needed to be furiously cleaned, repeatedly, before any pictures could be taken. It also feels a bit on the cheap side, although that's mostly down to Razer's decision to make the Viper V3 Pro as light as possible."
+
+Expected analysis result :
+
+{
+
+"sentiment": "Negative",
+
+"isRelevant": true,
+
+"mainSubject": "Material quality and feel",
+
+"positives": [],
+
+"painPoints": [
+
+"Shell material attracts fingerprints excessively",
+
+"Requires frequent cleaning",
+
+"Material feels cheap",
+
+"Design prioritizes weight over premium feel"
+
+],
+
+"improvementSuggestions": [
+
+"Use material that resists fingerprints better",
+
+"Improve perceived build quality while maintaining low weight"
+
+],
+
+"featuresMentioned": [
+
+"Shell material",
+
+"Build quality feel",
+
+"Weight"
+
+],
+
+"userExpertise": "Experienced"
+
+}
