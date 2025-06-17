@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: pyvalid
+Version: 0.2.0
+Summary: Мощная библиотека валидации данных для Python
+Requires-Python: >=3.8
+Requires-Dist: typing-extensions>=4.0.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Requires-Dist: flake8>=6.0.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: isort>=5.0.0; extra == "dev"
+Provides-Extra: web
+Requires-Dist: fastapi>=0.100.0; extra == "web"
+Requires-Dist: django>=4.0.0; extra == "web"
+Requires-Dist: pydantic>=2.0.0; extra == "web"
+Dynamic: requires-python
